@@ -19,7 +19,7 @@ concurrency:
 
 defaults:
     run:
-        self: bash
+        shell: bash
 
 jobs:
     build:
