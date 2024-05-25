@@ -1,0 +1,19 @@
+---
+title: "About"
+date: 2024-05-19T22:56:32+05:30
+showDate: false
+norss: true
+nosearch: true
+draft: false
+---
+
+Hello There!
+
+I'm Akash Doppalapudi. I like writing code, learning and talking about tech, read books and I often enjoy cooking and occassionally travelling.
+
+Checkout my github accounts [[https://github.com/akashdoppalapudi][One potato]], [[https://github.com/akashters][Two potato]].
+
+I also contribute to debian by [[https://qa.debian.org/developer.php?email=akashdoppalapudi2001%40gmail.com][maintaining packages]].
+Checkout my [[https://salsa.debian.org/akashdoppalapudi][salsa account]].
+
+My PGP Key Fingerprint : [[https://keys.openpgp.org/vks/v1/by-fingerprint/C8B2A95D8D855A9D8C6F0C78BCBCAE31ECE05007][C8B2A95D8D855A9D8C6F0C78BCBCAE31ECE05007]]

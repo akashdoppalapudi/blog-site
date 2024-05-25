@@ -1,0 +1,33 @@
+baseURL = 'https://theakash.dev/'
+languageCode = 'en-us'
+title = 'Akash Doppalapudi'
+theme = 'ficurinia'
+
+copyright = "Akash Doppalapudi"
+
+[params]
+    author = "Akash Doppalapudi"
+    description = "Akash Doppalapudi's blog site"
+
+    imageInArticlePreview = true
+
+    logo = "/logo.svg"
+    logoAltText = "Logo"
+    favicon = "/favicon.png"
+    faviconIco = "/favicon.ico"
+    appletouch = "/apple-touch-icon.png"
+    svgicon = "/logo.svg"
+
+[menu]
+    [[menu.icons]]
+        identifier = "github"
+        name = "Github"
+        url = "https://github.com/akashdoppalapudi"
+    [[menu.icons]]
+        identifier = "email"
+        name = "Email"
+        url = "mailto:akashdoppalapudi2001@gmail.com"
+    [[menu.icons]]
+        identifier = "gitlab"
+        name = "Gitlab"
+        url = "https://salsa.debian.org/akashdoppalapudi"

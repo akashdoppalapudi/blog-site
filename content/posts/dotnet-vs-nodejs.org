@@ -1,0 +1,66 @@
+---
+title: ".NET vs Nodejs"
+date: 2024-05-25T22:56:48+05:30
+tags:
+  - software
+  - development
+  - web-development
+image: "/images/dotnet-vs-nodejs.avif"
+toc: true
+draft: false
+---
+
+The first time I've coded an API is for a full-stack application which was my side-project. I've done some research and watched some youtube tutorials.
+Since I was using React for client-side I quickly chose to use *NodeJs* for my API.
+
+Later when I got into a company as an Intern I had to use .NET that's the first time for me to see technology other than NodeJs that we can use
+for APIs (I used Django in the past which is a python web framework but didn't give it that much of a thought)
+
+Let's see how these technologies compare in different aspects
+
+* Programming Languages
+
+*.NET* uses [[https://docs.microsoft.com/en-us/dotnet/csharp/][C#]] as it's programming language, it also supports other languages like [[https://docs.microsoft.com/en-us/dotnet/visual-basic/][Visual Basic]] and [[https://en.wikipedia.org/wiki/Visual_J%2B%2B][J#]] (Now Discontinued). C# is the most widely used
+language on .NET because of the endless features it offers.
+
+C# is a general-purpose programming language that is static, strongly typed and object oriented.
+
+Where on the other hand NodeJs as the name suggests uses [[https://www.javascript.com/][JavaScript]]. JavaScript is loosely typed (meaning you don't have to specify any types for variables)
+language. One can also use TypeScript which is a superset of JavaScript that uses Strong Typing. JavaScript was originally developed to run on browsers.
+But NodeJs is a runtime that allows JavaScript to run on a Server.
+
+* Frameworks
+
+*.NET* uses [[https://dotnet.microsoft.com/en-us/apps/aspnet][ASP.NET Core]] which is a framework to build web apps. *.NET* provides support for ASP.NET right out of the box. Developing an API is very
+simple in .NET as most of the things will be taken care of by ASP.NET.
+
+*NodeJS* can use any framework depending on the programmer's choice like Express, Sails, NestJS, etc., [[https://expressjs.com/][Express]] is the most used framework for NodeJs
+APIs. Here most of the heavy lifting must be done by the user but the upside to Express is it is very minimalistic.
+
+* Package Managers
+
+*NodeJS* uses different package managers based on developer's choice like =npm= (node package manager), =yarn= or =pnpm=. [[https://www.npmjs.com/][npm]] npm is the most used
+and default package manager for NodeJs.
+
+*.NET* uses a package manager called [[https://www.nuget.org/][Nuget Package Manager]] (Can't be called NPM 😉)
+
+* Source Code Structure
+
+ASP. NET by default gives a wonderful boilerplate code as an example and files are structured in an excellent way. While in NodeJs, not every
+framework provides a boilerplate code and a file system. Most of the time Programmer has to modularize their code and structure their files.
+So when writing a large and complex application .NET must be preferred.
+
+* Performance
+
+How both these languages perform behind the scenes is completely different. JavaScript is a single threaded language that focuses on CPU
+performance by sacrificing parallel computing ability. While .NET treats each response as a thread and multiple responses can be handled at once
+but once every thread is occupied, the responses will be queued.
+
+So in terms of a single request Node might win over .NET but when there are multiple requests per second .NET handles them better.
+
+* Conclusion
+
+So... The hardest part, Making a choice. Considering all the above discussed aspects. I choose .NET for large to medium size services and use NodeJs
+for small size applications.
+
+Thank you for reading.
