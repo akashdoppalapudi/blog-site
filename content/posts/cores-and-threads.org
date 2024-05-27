@@ -1,0 +1,73 @@
+---
+title: "Cores and Threads... What are they?"
+date: 2024-05-27T22:25:48+05:30
+tags:
+  - electronics
+image: "/images/cores-v-threads.avif"
+toc: true
+draft: false
+---
+
+Let's see where it began first... \\
+In 2018 when I bought my first smartphone (actually my mom bought it for me). I came across this fancy term "*octa-core*" in my mobile's settings.
+I thought octa means 8 and this term means 8 cores and I considered myself a genius for my deductive skills while completely ignoring the fact
+that I don't know what a core means.
+
+This term appeared again when I wanted to buy a laptop in 2020 (you guessed it right! my mom again). I got a laptop with an I5 processor.
+But when I was combing the internet like a maniac about these processors, "*Core*" came again with his friend, a new term called "*Thread*".
+Apparently the I5 I bought had 6 cores and 12 threads. I ignored those terms again.
+
+In 2021 again in my third year of engineering, we had a Java class and our professor mentioned that Java is a *multi-threaded* language.
+He didn't care to elaborate on the term and I didn't care to ask him that... (those were online classes by the way. cuz... COVID)
+
+After these terms haunted me for three years, I finally decided to learn about them. So I went to this secret place where people learn things...
+(It was YouTube). Here is what I found about it...
+
+* Core
+A *Core* is a division of CPU. When we talk about a Quad-Core processor or a processor with 4 Cores. That means the Processor has been split into 4 parts.
+
+This man named *Gordon Moore* who is co-founder of Intel made an observation that we now call *Moore's Law*. Observing the rapid increase in
+performance of microchips he stated that transistors on a microchip will be doubled every two years while the price is halved. Those were the days
+when the =number of transistors= and =clock speed= are the only parameters describing the performance of a microchip or a processor.
+
+All changed when Multi-Core processors entered the market. The concept behind that is pretty simple. If we have two cores on a processor, each core
+can perform a different task individually. So instead of struggling to increase the speed of operation, now our processor can perform two tasks
+simultaneously. The same goes for 4 cores and 6 cores. That means my I5 processor can handle 6 different tasks simultaneously as per the knowledge
+I have this far.
+
+* Thread
+But what is a thread? I asked myself. Then I remembered that know nothing about it, and I asked google. \\
+A thread essentially means a sequence of operations (sequence of 1's and 0's). For a processor to perform a task or do a computation, it needs
+instructions and data and this thread carries these sequences. Think of a thread as a conveyer belt carrying material into a machine
+(in this case, a processor). Let's consider we have one thread per core in my 6 core processor. So 6 tasks are being handled by the CPU and these
+threads are carrying data into them.
+
+Wait! but my processor has 12 threads, which means we have 2 threads per core. This actually means two different tasks can send(or receive)
+instructions and data to a core. The core handles these threads based on what the OS tells it to do. Generally, a core executes both the threads
+simultaneously, actually what happens is the core switches between these threads in an optimised way making it look like it is executing both
+threads simultaneously which is called *Concurrency*.
+
+This now means that my I5 processor can handle 12 tasks at a time. \\
+So the term 6 Cores, 12 Threads means that the processor has 6 physical cores and 12 logical cores.
+
+* My Crazy Analogy
+
+#+BEGIN_QUOTE
+Spoiler alert: This is going to be really crazy
+#+END_QUOTE
+
+Now let's think of a core as a waiter in a restaurant. If a core is a waiter you must've understood that a restaurant is a computer.
+Now 6 waiters can deliver 6 different orders to different tables. Now if we make our waiters carry 2 orders at a time like assigning two threads
+per core. They can actually deliver 12 different orders.
+
+I know that comparing a CPU core to a waiter is crazy, but I did it anyway.
+
+* Do more cores mean more performance?
+Technically No, but Yes. If you are performing one task on a single-core processor with a clock speed of 2.4 GHz and the same task on an octa-core
+processor with a clock speed of 1.8GHz. The single-core processor wins. But in real-world processors don't handle just one task. So, when there is
+a complex process with multiple tasks, a multi-core processor actually wins.
+
+Is a multi-core processor more powerful than a single-core processor? \\
+Not necessarily. But it is more efficient.
+
+Thank you for reading.
