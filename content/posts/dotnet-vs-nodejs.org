@@ -1,5 +1,6 @@
 ---
 title: ".NET vs Nodejs"
+description: ".NET and NodeJs are two major technologies used for web app development. Check out the article to find out how these two compare."
 date: 2024-05-25T22:56:48+05:30
 tags:
   - software

@@ -9,7 +9,7 @@ draft: false
 
 Hello There!
 
-I'm Akash Doppalapudi. I like writing code, learning and talking about tech, read books and I often enjoy cooking and occassionally travelling.
+I'm Akash Doppalapudi. I like writing code, learning and talking about tech, reading books and I often enjoy cooking and occassionally travelling.
 
 Checkout my github accounts [[https://github.com/akashdoppalapudi][One potato]], [[https://github.com/akashters][Two potato]].
 

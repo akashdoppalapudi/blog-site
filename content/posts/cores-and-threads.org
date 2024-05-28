@@ -1,5 +1,6 @@
 ---
 title: "Cores and Threads... What are they?"
+description: "We all must've heard the terms cores and threads in the context of processors. Let's see what they actually mean..."
 date: 2024-05-27T22:25:48+05:30
 tags:
   - electronics
