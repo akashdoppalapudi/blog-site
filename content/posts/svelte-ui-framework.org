@@ -1,0 +1,91 @@
+---
+title: "Is Svelte the best way to build UI?"
+description: "When it comes to frontend js frameworks Svelte doesn't have a community as huge as React or Framework. That doesn't make it any inferior."
+date: 2024-06-02T22:16:06+05:30
+tags:
+  - software
+  - development
+  - web-development
+image: "/images/svelte-post/svelte.avif"
+toc: true
+draft: false
+---
+
+When it comes to frontend js frameworks =Svelte= doesn't have a community as huge as React or Angular. That doesn't make it any inferior to any other
+framework. I think Svelte is the best way to build UIs (Enjoyable too).
+
+Let's see why I think so...
+
+* Svelte Files
+
+To make a UI that works on the web, we need HTML, CSS and JS but no one likes to do that normally that's too vanilla. So we have frameworks that make
+this work less pain in the carpel tunnel. React uses JSX files to make UIs which is a hybrid of HTML and JS. HTML can be written in JS files and
+angular takes a different approach by injecting JS in HTML files. In both cases, writing and maintaining CSS is hard (What's really hard is coming up
+with class names for CSS selectors).
+
+Svelte has its own files with the extension =.svelte= and in that we can write HTML, JS and CSS in one single file and styles here are truly scoped,
+which means styles written will be applied only for that component. Not just that one can opt to use TS just by adding an attribute ~lang="ts"~ also
+styles can be written in SCSS by including ~lang="scss"~ and adding a SASS plugin. You know what 'A' stands for in SASS.... yeah! Awesome.
+
+#+ATTR_HTML: :alt Screenshot of code showing example svelte component
+[[/images/svelte-post/svelte-code.png]]
+
+* Conditions and Loops
+
+I'm not gonna talk about conditions and loops in JS. Let's look at how svelte does conditional rendering and rendering a template multiple times.
+HTML in a svelte file has extended syntax that gives it more power to handle stuff like this.
+
+#+ATTR_HTML: :alt Screenshot of code showing example of svelte conditional rendering
+[[/images/svelte-post/svelte-cond.png]]
+
+#+ATTR_HTML: :alt Screenshot of code showing example of svelte looped rendering
+[[/images/svelte-post/svelte-loop.png]]
+
+* States, Props, Store and more...
+
+Having reactive states is really important in a UI. You can achieve that in react in several ways. The most famous way is to use a ~useState~ hook.
+It is still hard to maintain states across the application. That's why we have state management tools like redux and react query.
+
+Handling these is pretty easy in svelte... initialize a variable with ~let~ keyword, and it becomes a reactive state. we can use ~export~ keyword to
+define props and send data to a child component. We have a svelte Context API that stores data in key, value pairs and once defined in a component
+all the child components can access the data. Svelte also provides a way to utilise global states using =stores= concept where data in object form
+acts like an observable and any component can subscribe to it and get notified when the data changes.
+
+* Runtime
+
+Frameworks like React or Angular ship their runtimes to the browsers to make the code work.
+
+Svelte doesn't have to ship a runtime instead it loads JS files that can directly run on the browser. It converts our svelte files into plain JS files
+using a compiler. we will look at it later.
+
+* Virtual DOM vs Real DOM
+
+DOM means Document Object Model which is a programming API for HTML documents. Most of the frameworks like react use Virtual DOM. Virtual DOM is
+nothing but a representation of UI that can be updated quickly when changes are made and can be synced with Real DOM at intervals.
+
+Svelte operates on Real DOM. The svelte compiler generated pure JS code that can make updates to Real DOM and we can save time and memory on shipping
+Virtual DOM to the browser.
+
+#+ATTR_HTML: :alt An Image showing difference between how Svelte and React manipulate DOM
+[[/images/svelte-post/svelte-dom.png]]
+
+* Svelte Compiler
+
+Svelte Compiler takes the svelte code and converts it into pure JS that can run directly on Browser APIs. Svelte uses Vite to build a tool
+that is blazingly fast since it uses Rollup for production builds. Whereas React or Angular uses webpack to bundle code and dependencies.
+
+Since we are generating code that runs directly on the browser, we don't need any runtimes or virtual DOMs. So we get highly performant code in
+a very small package. Load times are really low in svelte applications.
+
+* SvelteKit and Sapper
+
+After all Svelte is more of a compiler and not even close to a full-blown framework. To get features like code splitting, server-side rendering
+and page-based routing, we can use svelte-based frameworks like SvelteKit and Sapper.
+
+* Conclusion
+
+Even though Svelte has all these awesome new features, it doesn't have thriving community support when compared to react. Svelte is gaining traction
+and becoming a strong contender in the frontend framework landscape.
+
+But it is worth giving it a try at least for your side projects.
+
