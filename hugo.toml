@@ -26,7 +26,7 @@ copyright = "Akash Doppalapudi"
     [[menu.icons]]
         identifier = "email"
         name = "Email"
-        url = "mailto:akashdoppalapudi2001@gmail.com"
+        url = "mailto:contact@theakash.dev"
     [[menu.icons]]
         identifier = "gitlab"
         name = "Gitlab"
