@@ -1,0 +1,138 @@
+---
+title: "Maui - Cross Platform Native Apps"
+description: ".NET MAUI a new .NET UI platform built by Microsoft."
+date: 2024-06-11T22:14:51+05:30
+tags:
+  - development
+  - software
+image: "/images/maui-post/maui.avif"
+toc: true
+draft: false
+---
+
+When a developer designs a client application one of the primary concerns is it's reach. We want our apps to be used by the maximum number of
+users possible. If one developed an application for a Windows machine, all the users who use devices like Mac, iOS and Android can’t use them.
+(It's different if you're rich enough to own multiple devices).
+
+There are several ways we can deal with it.
+
+* Web vs Native
+
+Probably the easiest way to get your application to maximum users is by building a Web App. A web app runs on a web browser. All the user needs
+to have a web browser and a web app will just run. Web Apps can be built using HTML, CSS and JS which is the most preferred and widely accepted
+abstraction to build UIs. Though we have countless frameworks like React, Angular and Vue.
+
+So far, it’s good, we can build web apps and users can just use them if they have a browser. But that’s not the end of the story. If we want to
+take advantage of the features of native devices like sensors, native UI built-in platform features, etc., we can’t do that using web apps.
+
+We need platform-specific native apps to take full advantage of the device like making phone calls, accessing files, geolocation and many more things.
+
+* The Problem
+
+The real problem is the availability of many types of devices like Android, iOS, Mac, Linux, Windows etc. They differ on various levels. Some have
+different Operating systems while some other devices are completely different starting from the hardware architecture. Wars like iPhone vs Android
+and Windows vs Mac have been going on for a long time, I’m not going to get into that now.
+
+#+ATTR_HTML: :alt Image showing logos of Windows, Apple and Android
+[[/images/maui-post/win-mac-android.png]]
+
+If we’re speaking from the user’s perspective having different choices of devices is not a problem but from a developer’s perspective developing
+apps for multiple platforms is the problem. Different platforms use different UI libraries and languages. To build native apps that fit into all
+the platforms, developers should learn all the specific languages and UI component libraries.
+
+This is when *Cross-Platform Apps* help us greatly.
+
+* Cross Platform
+
+#+ATTR_HTML: :alt Electron Logo
+[[/images/maui-post/electron.png]]
+
+Cross-Platform apps are applications that can be written once in a common language that can be run on multiple platforms. One of the popular
+cross-platform solutions for desktop apps is Electron built by GitHub. Electron can run on desktops like Windows, and Linux. Electron uses the
+web’s way of building UI using HTML, CSS, and JS which many of the developers already know. But if we take a deeper look at Electron it uses
+chromium to run the apps. Which is not so different from web apps. We cannot call it truly native.
+
+#+ATTR_HTML: :alt Flutter Logo
+[[/images/maui-post/flutter.png]]
+
+Another widely known cross-platform framework is Flutter built by Google. Flutter doesn’t use a Markup Language for UI. UI is defined in code that is
+strange and JAVA Applet failed for this specific reason. Also, Flutter uses a language called Dart which is again [[https://stackshare.io/stackups/dart-vs-html5][less known to many developers]].
+
+*.NET MAUI* shines in many areas where other frameworks fall short.
+
+* What's so special about .NET
+
+.NET is a unified development platform built and maintained by Microsoft. We can develop a wide range of applications on .NET. Be it Desktop, Web,
+Mobile or Cloud you can do it all on .NET. So .NET already has experience dealing with different platforms.
+
+#+ATTR_HTML: :alt Image illustrating versatality of dotnet
+[[/images/maui-post/dotnet-platform.png]]
+
+.NET uses well-known and maintained languages like C#. If you’re a fan of functional language you can use F# and there is also Visual Basic. .NET
+had native windows development for a long time in the form of WPF. It later introduced Xamarin Forms that use XAML for building UIs which is an
+extension of XML.
+
+Using a Markup Language has been the best way to build User Interfaces among the developer community. So Xamarin forms would feel familiar to
+developers who had worked with HTML or XML. .NET had Xamarin forms for Android, and iOS to build their respective native apps.
+
+.NET MAUI (Multi-Platform App UI) is the extension of Xamarin forms where all the devices share a common code base.
+
+* How does MAUI work?
+
+MAUI looks just like any other .NET application. Its architecture is simple. We have XAML files that define the UI. And every XAML file has an
+attached C# file that contains logic which is called Code Behind. .NET MAUI uses a shared architecture where code, resources and business logic
+were all shared by different platforms.
+
+#+ATTR_HTML: :alt Image illustrating MAUI's working with different platforms
+[[/images/maui-post/maui-work.png]]
+
+.NET MAUI utilizes all the advantages of the .NET environment like the usage of Models, Services, Dependency Injection and so on. We can also
+use MVVM (Model View ViewModel) architecture which works with data binding as its core feature just by installing a NuGet package. Yes, we can
+use third-party libraries in the MAUI application.
+
+But as we discussed above, different platforms use different UI libraries, how can use a single codebase that defines UI that can work on all
+platforms? How does MAUI achieve this?
+
+MAUI abstracts similar components of different platforms into a single component that can be used in UI definition when it’s compiled to the target
+platform it gets replaced with the component of its UI library.
+
+#+ATTR_HTML: :alt Image illustrating component abstraction in MAUI
+[[/images/maui-post/maui-abstraction.png]]
+
+In this way, .NET achieves the development of cross-platform native applications with a wide range of UI components.
+
+#+ATTR_HTML: :alt Image showing various components of MAUI
+[[/images/maui-post/components.png]]
+
+* Developer Experience
+
+Developer experience is also an important criterion for choosing a framework. With C# for logic and XAML for UI, there is a very less learning
+curve and it will be comfortable for developers to build applications. Also, some other important criteria while building user interfaces is the
+real-time live preview and the ability to inspect element tree.
+
+.NET’s recommended IDE, [[https://visualstudio.microsoft.com/][Visual Studio]] contains many productivity tools that make developing with MAUI a breeze. It has XAML and C# hot reload that
+updates the application with code changes in real-time. It allows developers to debug applications with different devices and emulators.
+
+According to me the XAML hot reload got to be the best feature here as we always need that continuous visual feedback while building UIs.
+
+* Pros
+
++ Built on .NET Ecosystem where .NET developers can feel at home.
+
++ Uses a markup language to build UI.
+
++ Uses C# to define logic.
+
++ MAUI Can be hybridized with the Blazor app to get web apps into the mix.
+
+* Cons
+
++ Less Mature, released in mid-2022.
+
++ Doesn’t support Linux as it has multiple distros and many desktop environments like Gnome, KDE etc. so its UI can’t be generalized.
+
+* Conclusion
+
+.NET MAUI is a better way of building Cross-Platform Native Applications. .NET has a good community and is backed by Microsoft. Building multi-platform apps will be a breeze using MAUI and MAUI it can be integrated with Blazor where Native and Web can come hand in hand together.
+
+MAUI might be the next revolution in native cross-platform applications.
