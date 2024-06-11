@@ -65,7 +65,7 @@ After all, Men will be men. On a different note... We were scared of monkeys too
 After walking quite some distance under the hot sun... (When a South Indian says it's hot... it's HOT. Both food and weather) we reached the waterfall.
 
 #+ATTR_HTML: :alt Photograph of Talakona Waterfalls
-[[/images/sdsc-post/waterfalls.png]]
+[[/images/sdsc-post/waterfalls.jpg]]
 
 The minute we saw the waterfalls we decided that we should swim. The path that goes to the waterfall is so slippery that some of us almost broke
 our backs slipping. The whole situation is PATH BREAKING backs.
@@ -84,7 +84,7 @@ The next destination was Chandragiri Fort which is a tourist attraction in that 
 It's a historic place (The history I didn't know) that turned into a destination for Pre-Wedding Shoots.
 
 #+ATTR_HTML: :alt Photograph of part of Chandragiri Fort
-[[/images/sdsc-post/chandragiri-fort.png]]
+[[/images/sdsc-post/chandragiri-fort.jpg]]
 
 The sun already set by the time we left the fort.
 
@@ -102,7 +102,7 @@ dam, we had to walk up some stairs. Damn, were those stairs hard!.. It looked li
 and narrow. We got up somehow and Damn is the scenery beautiful!..
 
 #+ATTR_HTML: :alt Photograph of water taken from Kalyani Dam
-[[/images/sdsc-post/kalyani-dam.png]]
+[[/images/sdsc-post/kalyani-dam.jpg]]
 
 Getting down those stairs was even harder than getting up.
 
@@ -118,7 +118,7 @@ It was so far away from the Dam it was already evening by the time we went there
 To our surprise... with us being there just in time for sunset this was the most beautiful place I've seen on the whole trip.
 
 #+ATTR_HTML: :alt Picture of sunset taken from the top of Horsley Hills
-[[/images/sdsc-post/horsley-hills.png]]
+[[/images/sdsc-post/horsley-hills.jpg]]
 
 It was night before we knew it. And one of us got a Bluetooth speaker and blasted the song [[https://www.youtube.com/watch?v=OsU0CGZoV8E&ab_channel=LahariMusic%7CT-Series][Naatu Naatu]]. One of us did a little choreography or
 showed some moves so that everyone can dance for it together.
@@ -161,7 +161,7 @@ unreal.
 After the tour, we got our mobiles back (Finally!!) and visited the museum over there that showcased Indian Space History...
 
 #+ATTR_HTML: :alt Photograph of a miniature of SDSC in the museum
-[[/images/sdsc-post/miniature.png]]
+[[/images/sdsc-post/miniature.jpg]]
 
 * C# to C the Sea
 
@@ -170,7 +170,7 @@ But it was already night and we couldn't see the Sea. But darkness can't stop us
 But one of our friends had a different idea. He drenched us in water. It was nice playing in the water and enjoyed it a lot.
 
 #+ATTR_HTML: :alt Photograph of Sea in the night
-[[/images/sdsc-post/sea.png]]
+[[/images/sdsc-post/sea.jpg]]
 
 After getting wet... changing clothes was enough struggle and getting rid of sand was a challenge on top of it.
 We had our last supper together and started for Guntur.
