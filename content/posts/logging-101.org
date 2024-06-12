@@ -1,0 +1,129 @@
+---
+title: "Logging 101"
+description: "Logging is the act of keeping a log of events that occur in a computer system, such as problems, errors or just information on current operations."
+date: 2024-06-12T22:45:24+05:30
+tags:
+  - development
+  - software
+image: "/images/logging-post/logging.avif"
+toc: true
+draft: false
+---
+
+* What’s logging anyway 🤔?
+
+Logging is the act of keeping a log of events that occur in a computer system, such as problems, errors or just information on current operations.
+These events may occur in an operating system, a web app living on the cloud or any device that has a computer in it.
+
+Let’s think of a printer for instance. We can find logfiles that contain all printer logs about when the printer was active, when it printed
+something and where the print request came from. This helps in increasing the observability of software and systems in general.
+
+#+ATTR_HTML: :alt Image showing logs from a printer
+[[/images/logging-post/printer-logs.png]]
+
+* Why should we use logging?
+
+Logging is a crucial component of any software system, as it provides a way to track and analyze the behavior of your application. Whether you’re
+developing a web application, a desktop application, or a mobile app, logging helps you identify issues and optimize performance. In this article,
+we will discuss logging frameworks and what to look for when selecting a logging framework. Let’s consider two famous backend technologies, dotnet
+and Nodejs.
+
+* What to look for in a Logging Framework?
+
+** Ease of use
+
+The logging framework should be easy to set up and use, with clear documentation and examples. You should spend less time figuring out logging and
+more time on application logic.
+
+** Scalability
+
+The logging framework should be able to handle large volumes of log data and provide scalable.
+
+** Storage Options
+
+The logging framework should provide options to store logs in multiple storage options like files, databases etc.,
+
+** Flexibility
+
+The logging framework should support different log levels, formats, transports and filters to meet your specific logging needs.
+
+** Security
+
+The logging framework should support secure transport and storage of log data, with options for encryption and access control.
+
+** Asynchronous Logging
+
+It’s better to choose a framework that can perform both synchronous and asynchronous logging that doesn’t block the execution of your main business
+logic.
+
+* Logging Frameworks for Dotnet and NodeJs
+
+There are several logging frameworks available for dotnet and Nodejs-based applications. Here are some of the most popular ones:
+
+** Serilog
+
+Serilog is a popular logging framework for dotnet-based applications. It provides a sample API, flexible configuration options and supports a wide
+range of sinks such as console, file, database and cloud services.
+
+** NLog
+
+NLog is another popular logging framework for dotnet-based applications. It provides a highly configurable and extensible API, with support for
+custom targets, layouts and filters.
+
+** Winston
+
+Winston is a popular logging framework for Nodejs-based applications. It provides a simple API, flexible configuration options and supports a wide
+range of transports such as console, file, database and cloud services.
+
+** Bunyan
+
+Bunyan is another popular logging framework for Nodejs-based applications. It provides a simple API, structured log data and support for JSON log
+format.
+
+* Best Practices
+
+In addition to selecting the right logging framework, it is important to follow the best practices for logging, such as:
+
+** Use meaningful log messages
+
+Ensure that your log messages provide enough information to identify issues and diagnose problems.
+
+** Use structured logging
+
+Structured logging makes it easier to analyze log data, as it allows you to log key-value pairs and other structured data.
+
+When you log data in structured data like “logTime: YYYY-MM-DD HH-mm-SS, message: sign in failed” it helps in the analysis since we can filter the
+logs based on the key-value pairs.
+
+** Avoid logging sensitive information
+
+Be careful not to log sensitive data such as passwords, credit card numbers and personally identifiable information.
+
+Normally logs will be stored somewhere in the cloud for future reference or will be given to an analyst for analyzing them. So, it’s better to
+avoid logging any personal information that belongs to the user.
+
+** Regularly analyze and review log data
+
+Regularly reviewing and analyzing log data can help you identify issues, optimize performance and improve the overall quality of your application.
+
+** Be concise
+
+Avoid writing unnecessary logs. Though logs can help us grab a clear idea of application behavior, overdoing it will waste memory and makes
+it difficult to analyze the logs later.
+
+** Make better use of Log Level
+
+Almost all of these frameworks support different log levels like Information, Error, Warning, Debug etc., These levels hold their certain meaning
+and purpose. So, make good use of log levels to add more meaning and intuition to your logs.
+
+* Conclusion
+In conclusion, logging is a crucial aspect of any software system and selecting the right logging framework is important for ensuring the
+reliability, performance and security of your application. When selecting a logging framework, consider factors such as ease of use, performance,
+scalability, flexibility and security. Serilog and NLog are popular logging frameworks for dotnet-based applications, while Winston and Bunyan
+are popular logging frameworks for Nodejs-based applications. These frameworks provide a wide range of features and configuration options, making
+it easy to log and analyze log data in a scalable and flexible way.
+
+By following the best practices and selecting the right logging framework for your dotnet or Nodejs-based application, you can ensure your
+application is reliable, performant and secure.
+
+Thank you for reading this article.
