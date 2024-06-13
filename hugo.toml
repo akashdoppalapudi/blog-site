@@ -4,6 +4,7 @@ title = 'Akash Doppalapudi'
 theme = 'ficurinia'
 
 copyright = "Akash Doppalapudi"
+paginate = 5
 
 [params]
     author = "Akash Doppalapudi"
