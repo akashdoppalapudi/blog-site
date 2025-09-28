@@ -4,7 +4,9 @@ title = 'Akash Doppalapudi'
 theme = 'ficurinia'
 
 copyright = "Akash Doppalapudi"
-paginate = 5
+
+[pagination]
+    pagerSize = 5
 
 [params]
     author = "Akash Doppalapudi"
@@ -23,7 +25,7 @@ paginate = 5
     [[menu.icons]]
         identifier = "github"
         name = "Github"
-        url = "https://github.com/akashdoppalapudi"
+        url = "https://github.com/akashters"
     [[menu.icons]]
         identifier = "email"
         name = "Email"
