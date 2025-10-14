@@ -1,0 +1,93 @@
+---
+title: "Elegance of Unix - What makes Unix simply awesome?"
+description: "Unix inspired more than half of the popular operating systems. GNU/Linux, BSD, Minix and more. Let's see what's so special about Unix."
+date: 2025-10-13T23:00:00+05:30
+tags:
+  - software
+image: "/images/elegance-of-unix.avif"
+toc: true
+draft: false
+---
+
+When I was in college, I switched from pre-installed Windows on my laptop to GNU/Linux for the first time, Ubuntu to be precise. I didn't know much
+about the technology and the history of Unix-like systems. I was only driven by the desire to use a setup that was completely different from what my
+classmates were using and the concept of free and open-source software was pretty intriguing to me.
+
+I only learned stuff on a need to know basis all while hopping countless number of distros (Now I use Arch btw). My tinkering sparked a genuine
+curiosity to understand how an operating system /really/ works. I starting watching brilliant videos by educators like [[https://youtube.com/playlist?list=PL9IEJIKnBJjFNNfpY6fHjVzAwtgRYjhPw&si=NCh0fxG3g66ti6PV][Jacob Sorber]] and on my friend [[https://s20n.dev/][Shriram's]]
+recommendation, I started reading the famous [[https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Operating%20Systems.%20Design%20and%20Implementation.pdf][Minix Book (Operating Systems: Design and Implementation)]]. It was through this process I realised how
+awesome Unix was and how it's design is fascinatingly simple.
+
+The core idea I stumbled upon felt familiar. It was a powerful abstraction, similar to the one I already knew from a different part of the
+developer world: SQL
+
+* SQL and Database Interfacing
+
+SQL (Structured Query Language) is the language developers use to communicate with the database. When talking about SQL, the language itself is the
+interface. Whether the database engine is PosgreSQL, MySQL or something else, the core ~SELECT~, ~INSERT~ and ~UPDATE~ commands remain the same.
+This abstraction lets the developers focus on the /what/ (the data they need) instead of /how/ (the on-disk storage, query planning and indexing algorithms).
+Unix, I learned, applied the same beautiful simplicity to the the entire operating system.
+
+An operating system has a lot of things to work together for it to run without any issues. Every modern OS has to manage processes, file systems,
+hardware devices and network connections. Most early systems developed complex, specialized APIs for each task. The creators of Unix, however, asked
+a revolutionary question: what if we didn't have to develop multiple APIs for several tasks? What if all these different components can be treated as
+the same thing? In Unix, they are. They are all just files.
+
+* The Origin of Unix
+
+This radical idea wasn't born in a typical corporate planning session. It was born out of frustration and a desire for a better development environment.
+In 1960s, Bell Labs, GE and MIT collaborated on a massive and ambitious project to build an operating system called [[https://en.wikipedia.org/wiki/Multics][Multics]].
+While innovative Multics was becoming crushingly complex. In 1969 Bell Labs withdrew from the project. [[https://en.wikipedia.org/wiki/Ken_Thompson][Ken Thompson]], a programmer at Bell Labs liked the
+flexibility of Multics and wanted to implement a new operating system that could run on less sophisticated machines.
+
+[[https://en.wikipedia.org/wiki/Ken_Thompson][Ken Thompson]], [[https://en.wikipedia.org/wiki/Dennis_Ritchie][Dennis Ritchie]] and a few other at the Bell Labs decided to take the goals of Multics and implement on a much smaller scale. Thompson
+began to work on a [[https://en.wikipedia.org/wiki/PDP-7][PDP-7 Minicomputer]] that was lying around, partly motivated by a desire to get a "Space Travel" game he wrote to run. Running it
+on a [[https://en.wikipedia.org/wiki/GE-600_series][GE 635 mainframe]] would cost $75 ($664 in 2025) for a typical game.
+
+He, Ritchie and others built a new, lightweight operating system. As a pun on "Multics", it was named "Unix" (pronounced as "Eunuchs"). This new
+system was laters rewritten in a powerful new language they also created: C. Rewriting Unix in C was a pivotal moment making Unix portable, allowing
+it to be adapted to different hardware and seeding it's eventual journey across the globe.
+
+* System Calls and File Descriptors
+
+Now, back to their brilliant idea. At the heart of the Unix is the "everything is a file" philosophy. When your program wants to interact with anything,
+the kernel gives you a simple integer called a *file descriptor*. This number is your universal handle, and you use a tiny, consistent set of commands
+(system calls) to interact with it:
++ ~open()~: Get a file descriptor for a resource.
++ ~read()~: Read data from the file descriptor.
++ ~write()~: Write data to the file descriptor.
++ ~close()~: Tell the kernel you are done.
+
+This design shines in practical applications:
++ *Device Files*: The =/dev= directory contains special files that represent hardware. A program can write to a printer (=/dev/lp0=) or read
+  from a keyboard using the same ~write()~ and ~read()~ calls it would use for a regular file. A disk on your computer would show up as =/dev/sda1=
+  or if you insert a usb storage device, it would show up as =/dev/sdb1=.
+
++ *Pipes and Redirection*: Think of the iconic pipe (=|=). When you run ~ls -l | grep "hello"~, you are trying to look for files which has hello in it's
+  name. The shell isn't doing complex magic. It simply connects the ~write()~ end of =ls= command to the ~read()~ end of =grep= command. Neither
+  program knows or cares that it's talking to another program; they just read and write. You can begin to understand how this makes inter-process communication
+  easy.
+
++ *Sockets*: When a network connection is established, the kernel returns a file descriptor. From that point on, sending and receiving data over
+  network uses the same ~read()~ and ~write()~ syscalls.
+
++ *Virtual Filesystems*: Modern systems like Linux use =/proc= and =/sys= to expose kernel data as files. You can read =/proc/meminfo= to get memory
+  statistics using standard file-reading tools.
+
+* Conquering the Computing World
+
+This brilliantly simple design was too powerful to remain at Bell Labs.
+
++ It was taught to students through [[https://en.wikipedia.org/wiki/Minix][Minix]], written by [[https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum][Andrew S. Tanenbaum]].
++ It was extended by universities into the [[https://en.wikipedia.org/wiki/Berkeley_Software_Distribution][BSD family]], which was instrumental in integrating the internet protocol stack.
++ It was re-implemented from scratch by [[https://en.wikipedia.org/wiki/Linus_Torvalds][Linux Torvalds]] to create the Linux kernel, which now powers a vast portion of the world's servers, phones,
+  embedded devices and some desktops.
+
+The core principles were eventually codified into the [[https://en.wikipedia.org/wiki/POSIX][POSIX: Portable Operating System Interface]] standard, ensuring that programs written for one
+Unix-like system could easily compiled and run on another.
+
+* Conclusion
+
+The genius of Unix isn't in a long list of features. It's in the radical act of removing complexity. By abstracting the messy world of hardware and
+networking behind a single , elegant /file/ interface, Unix gave developers a simple set of tools that could be combined in nearly infinite ways.
+That foundational idea of simplicity and consistency is why, decades later, the Unix design remains relevant.
