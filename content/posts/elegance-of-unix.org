@@ -80,7 +80,7 @@ This brilliantly simple design was too powerful to remain at Bell Labs.
 
 + It was taught to students through [[https://en.wikipedia.org/wiki/Minix][Minix]], written by [[https://en.wikipedia.org/wiki/Andrew_S._Tanenbaum][Andrew S. Tanenbaum]].
 + It was extended by universities into the [[https://en.wikipedia.org/wiki/Berkeley_Software_Distribution][BSD family]], which was instrumental in integrating the internet protocol stack.
-+ It was re-implemented from scratch by [[https://en.wikipedia.org/wiki/Linus_Torvalds][Linux Torvalds]] to create the Linux kernel, which now powers a vast portion of the world's servers, phones,
++ It was re-implemented from scratch by [[https://en.wikipedia.org/wiki/Linus_Torvalds][Linus Torvalds]] to create the Linux kernel, which now powers a vast portion of the world's servers, phones,
   embedded devices and some desktops.
 
 The core principles were eventually codified into the [[https://en.wikipedia.org/wiki/POSIX][POSIX: Portable Operating System Interface]] standard, ensuring that programs written for one
