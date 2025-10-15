@@ -15,7 +15,7 @@ classmates were using and the concept of free and open-source software was prett
 
 I only learned stuff on a need to know basis all while hopping countless number of distros (Now I use Arch btw). My tinkering sparked a genuine
 curiosity to understand how an operating system /really/ works. I starting watching brilliant videos by educators like [[https://youtube.com/playlist?list=PL9IEJIKnBJjFNNfpY6fHjVzAwtgRYjhPw&si=NCh0fxG3g66ti6PV][Jacob Sorber]] and on my friend [[https://s20n.dev/][Shriram's]]
-recommendation, I started reading the famous [[https://csc-knu.github.io/sys-prog/books/Andrew%20S.%20Tanenbaum%20-%20Operating%20Systems.%20Design%20and%20Implementation.pdf][Minix Book (Operating Systems: Design and Implementation)]]. It was through this process I realised how
+recommendation, I started reading the famous [[https://en.wikipedia.org/wiki/Operating_Systems:_Design_and_Implementation][Minix Book (Operating Systems: Design and Implementation)]]. It was through this process I realised how
 awesome Unix was and how it's design is fascinatingly simple.
 
 The core idea I stumbled upon felt familiar. It was a powerful abstraction, similar to the one I already knew from a different part of the
